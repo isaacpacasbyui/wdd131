@@ -1,0 +1,171 @@
+/* ==============================
+   GENERAL PAGE STYLES
+   Mobile First
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d3d3d3;
+}
+
+
+/* ==============================
+   HEADER
+================================= */
+
+header {
+    background-color: #2f80d9;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+/* ==============================
+   MOBILE MENU
+================================= */
+
+.menu-button {
+    display: block;
+    margin: 0.75rem auto 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+/* Navigation links hidden on mobile */
+
+nav {
+    display: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.75rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   MAIN CONTENT
+================================= */
+
+main {
+    padding: 1rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+
+/* ==============================
+   IMAGE GALLERY
+================================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+}
+
+figure {
+    margin: 0;
+    padding: 0.5rem;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px;
+
+    /* Required by assignment */
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer {
+    background-color: #2f80d9;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ==============================
+   TABLET
+================================= */
+
+@media screen and (min-width: 700px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 300px);
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+}
+
+
+/* ==============================
+   DESKTOP
+================================= */
+
+@media screen and (min-width: 1000px) {
+
+    /* Hide mobile menu button */
+
+    .menu-button {
+        display: none;
+    }
+
+
+    /* Show navigation */
+
+    nav {
+        display: block;
+        margin-top: 0.75rem;
+    }
+
+
+    /* Three image columns */
+
+    .gallery {
+        grid-template-columns: repeat(3, 300px);
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+}
