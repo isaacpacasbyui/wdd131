@@ -1,0 +1,180 @@
+/* ==============================
+   GENERAL STYLES
+   Mobile First
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #fff;
+}
+
+
+/* ==============================
+   HEADER
+================================= */
+
+
+header h1 {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+
+/* ==============================
+   NAVIGATION
+================================= */
+
+nav {
+    border-top: 1px solid #df0b0b;
+    border-bottom: 1px solid #df0b0b;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+
+    margin: 0;
+    padding: 0.75rem 1rem;
+
+    list-style: none;
+}
+
+nav a {
+    color: #df0b0b;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   MAIN CONTENT
+================================= */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+/* ==============================
+   BOOK REVIEW
+================================= */
+
+.book-review {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+
+/* ==============================
+   BOOK DETAILS
+================================= */
+
+.book-details {
+    text-align: right;
+    line-height: 1.5;
+}
+
+.book-details p {
+    margin: 0.2rem 0;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.rating {
+    letter-spacing: 0.1rem;
+}
+
+
+/* ==============================
+   BOOK CONTENT
+================================= */
+
+.book-content {
+    text-align: left;
+}
+
+.book-content h2 {
+    margin-top: 0;
+    color: #df0b0b;
+    font-size: 1.2rem;
+}
+
+.book-content img {
+    display: block;
+
+    width: 180px;
+    max-width: 100%;
+
+    margin: 1rem auto;
+
+    height: auto;
+}
+
+.book-content p {
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+
+    border-top: 1px solid #df0b0b;
+
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* ==============================
+   LARGER SCREENS
+================================= */
+
+@media screen and (min-width: 700px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .book-review {
+        grid-template-columns: 180px 1fr;
+        gap: 2rem;
+    }
+
+    .book-details {
+        padding-right: 1rem;
+
+        border-right: 1px solid #df0b0b;
+    }
+
+    .book-content img {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
