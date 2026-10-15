@@ -45,17 +45,72 @@ header h1 {
     cursor: pointer;
 }
 
+.gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+figure img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 15px black;
+    display: block;
+    margin: 0 auto;
+}
+
+/* modal */
+
+dialog img {
+    width: 90%;
+    display: block;
+    margin: 15vh auto;
+}
+/*dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}*/
+dialog {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+    max-height: none;
+
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
 
 /* Navigation links hidden on mobile */
 
 nav {
+    display: block;
+    margin-top: 0.75rem;
+}
+.hide{
     display: none;
 }
-
 nav a {
+    display: block;
     color: white;
     text-decoration: none;
-    margin: 0 0.75rem;
+    margin: 1rem 0;
 }
 
 nav a:hover {
@@ -154,11 +209,16 @@ footer p {
 
     /* Show navigation */
 
-    nav {
+   nav,
+    nav.hide {
         display: block;
         margin-top: 0.75rem;
     }
 
+    nav a {
+        display: inline;
+        margin: 0 0.75rem;
+    }
 
     /* Three image columns */
 
@@ -166,6 +226,22 @@ footer p {
         grid-template-columns: repeat(3, 300px);
         justify-content: center;
         gap: 1.5rem;
+    }
+
+     dialog img {
+        width: 55%;
+        margin: 15vh auto;
+    }
+    .close-viewer {
+        position: absolute;
+        right: 15vh;
+    }
+    .viewer {
+        margin: 50px;
+        padding: 50px;
+    }
+    .viewer img {
+        max-width: 800px;
     }
 
 }
