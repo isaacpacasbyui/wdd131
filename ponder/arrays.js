@@ -18,7 +18,7 @@ let myList = document.querySelector('#myList');
 const stepsHtml = steps.map(listTemplate);
 
 function listTemplate(item){
-    return `<li>$[item]</li>`;
+    return `<li>${item}</li>`;
 };
 
 myList.innerHTML = stepsHtml.join('');
@@ -118,7 +118,7 @@ students.forEach(function(item){
         <hr>
     `;
     name.innerHTML = html;
-    container.appendChild;
+    container.appendChild(name);
 })
           
 
