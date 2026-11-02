@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Character Card | Aiden the Guardian</title>
+
+  <meta
+    name="description"
+    content="Meet Aiden the Guardian. Level up your character and track his health during battle."
+  >
+  <meta name="author" content="Isaac">
+
+  <!-- Open Graph: Facebook, LinkedIn, and other platforms -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aiden the Guardian | Character Card">
+  <meta
+    property="og:description"
+    content="An interactive character card built with JavaScript objects and methods."
+  >
+  <meta
+    property="og:url"
+    content="https://isaacpacasbyui.github.io/wdd131/charactercard/"
+  >
+  <meta
+    property="og:image"
+    content="https://isaacpacasbyui.github.io/wdd131/charactercard/images/social-preview.png"
+  >
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta
+    property="og:image:alt"
+    content="A reptilian warrior standing in a misty forest swamp."
+  >
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aiden the Guardian | Character Card">
+  <meta
+    name="twitter:description"
+    content="Level up Aiden and track his health during battle."
+  >
+  <meta
+    name="twitter:image"
+    content="https://isaacpacasbyui.github.io/wdd131/charactercard/images/social-preview.png"
+  >
+  <meta
+    name="twitter:image:alt"
+    content="A reptilian warrior standing in a misty forest swamp."
+  >
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="images/favicon.png"
+  >
+
+  <!-- Apple Touch Icon -->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="images/apple-touch-icon.png"
+  >
+
+  <!-- Styles and JavaScript -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="character.js" defer></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <p>THE ADVENTURER'S JOURNAL</p>
+    <h1>Character Card</h1>
+  </header>
+
+  <main>
+    <article class="card" aria-labelledby="character-name">
+      <img
+        id="character-image"
+        class="character-image"
+        src="images/character.jpg"
+        alt="Aiden the Guardian"
+        width="643"
+        height="643"
+      >
+
+      <div class="card-content">
+        <p class="eyebrow">HERO PROFILE</p>
+
+        <h2 id="character-name"></h2>
+
+        <dl class="stats">
+          <div>
+            <dt>Class</dt>
+            <dd id="character-class"></dd>
+          </div>
+
+          <div>
+            <dt>Level</dt>
+            <dd id="character-level"></dd>
+          </div>
+
+          <div>
+            <dt>Health</dt>
+            <dd>
+              <span id="character-health"></span> / 100
+            </dd>
+          </div>
+        </dl>
+
+        <label for="health-bar">Health remaining</label>
+
+        <progress id="health-bar" max="100" value="100">
+          100%
+        </progress>
+
+        <p
+          id="message"
+          class="message"
+          role="status"
+          aria-live="polite"
+        ></p>
+
+        <div class="buttons">
+          <button id="attack-button" type="button">
+            Attacked −20 HP
+          </button>
+
+          <button id="level-button" type="button">
+            Level Up +1
+          </button>
+
+          <button
+            id="reset-button"
+            class="reset-button"
+            type="button"
+          >
+            Reset Character
+          </button>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>Created by Isaac | WDD 131</p>
+  </footer>
+</body>
+</html>
