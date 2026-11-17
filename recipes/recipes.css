@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #171717;
+    background-color: #fff;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    font-family: "Amatic SC", cursive;
+    font-weight: 700;
+}
+
+.site-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.logo {
+    width: clamp(60px, 15vw, 110px);
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2.75rem, 9vw, 4.5rem);
+    line-height: 1;
+}
+
+.search {
+    display: flex;
+    margin-bottom: 1rem;
+    border: 1px solid #171717;
+    border-radius: 6px;
+}
+
+.search input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.65rem;
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    border: 0;
+    border-left: 1px solid #777;
+    border-radius: 0 6px 6px 0;
+    background: #fff;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 28px;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem;
+    border: 1px solid #171717;
+    border-radius: 6px;
+}
+
+.recipe-photo {
+    width: 100%;
+    align-self: flex-start;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.2rem 0.35rem;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    background-color: #eee;
+}
+
+.recipe h2 {
+    margin: 0.85rem 0 0.1rem;
+    color: #006aa6;
+    font-size: 2rem;
+}
+
+.rating {
+    color: #a85b00;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+}
+
+.star-empty {
+    color: #171717;
+}
+
+.recipe-description {
+    display: none;
+}
+
+.site-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.credit {
+    font-size: 0.75rem;
+}
+
+.social {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.social img {
+    width: 32px;
+    height: 32px;
+}
+
+@media (min-width: 600px) {
+    .search {
+        position: relative;
+        margin-bottom: 1.75rem;
+    }
+
+    .search::after {
+        position: absolute;
+        right: 0;
+        bottom: -0.9rem;
+        left: 0;
+        border-bottom: 1px solid #aaa;
+        content: "";
+    }
+
+    .recipe {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .recipe-photo {
+        width: 47%;
+    }
+
+    .recipe-details {
+        flex: 1;
+    }
+
+    .recipe-description {
+        display: block;
+        margin: 0.65rem 0 0;
+        line-height: 1.4;
+    }
+
+    .site-footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
